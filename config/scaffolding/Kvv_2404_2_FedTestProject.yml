@@ -8,17 +8,10 @@ packages:
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 - name: WmJDBCAdapter
+  version: 10.3.0.0.34
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
-- serviceName: project.kvv_2404_2_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:mysql
-  packages:
-  - name: Kvv_2404_2_FedTestProject
-    version: "1.0"
-  - name: WmJDBCAdapter
-    version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
 - serviceName: project.kvv_2404_2_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:TestDBConn
   packages:
   - name: Kvv_2404_2_FedTestProject
@@ -40,10 +33,10 @@ configurationVariables:
   ? artConnection.Kvv_2404_2_FedTestProject.project.kvv_2404_2_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.datasourceClass
   : com.mysql.cj.jdbc.MysqlDataSource
   jdbc.SAP-TxStore-Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP-TxStore-Pool.log;ddtdbg.ProtocolTraceShowTime=true
-  ? artConnection.Kvv_2404_2_FedTestProject.project.kvv_2404_2_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.poolIncrementSize
-  : "1"
   ? artConnection.Kvv_2404_2_FedTestProject.project.kvv_2404_2_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.startupRetryCount
   : "0"
+  ? artConnection.Kvv_2404_2_FedTestProject.project.kvv_2404_2_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.poolIncrementSize
+  : "1"
   jdbcfunc.SAPTxStore.failFastMode: false
   jdbcfunc.Xref.failFastMode: true
   ? artConnection.Kvv_2404_2_FedTestProject.project.kvv_2404_2_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.databaseName
